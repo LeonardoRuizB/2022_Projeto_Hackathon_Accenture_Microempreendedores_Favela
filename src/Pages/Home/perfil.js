@@ -1,7 +1,11 @@
 import React from 'react';
 import { View, Image, Text, ScrollView, TouchableOpacity } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
 
 export default function Perfil() {
+
+    const navigation = useNavigation();
+
  return (
    <ScrollView>
         <View style={{backgroundColor:'#E2E2E2', height:120, marginTop:-12}}></View>
@@ -68,7 +72,7 @@ export default function Perfil() {
                     <Text>24</Text>
                 </View>
             </View>
-            <TouchableOpacity style={{backgroundColor:'#2460DA', height:70, marginTop:20, borderRadius:10, marginBottom:30, justifyContent:'center', alignItems:'center'}}>
+            <TouchableOpacity style={{backgroundColor:'#2460DA', height:70, marginTop:20, borderRadius:10, marginBottom:30, justifyContent:'center', alignItems:'center'}} onPress={() => navigation.navigate('Crescer')}>
                 <Text style={{color:'white', fontSize:25}}>ME AJUDA A CRESCER</Text>
             </TouchableOpacity>
         </View>

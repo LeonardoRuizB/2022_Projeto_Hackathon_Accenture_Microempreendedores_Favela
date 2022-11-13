@@ -6,7 +6,8 @@ import { Pagamento } from '../Pages/Home/Pagamento';
 import { Produtos } from '../Pages/Home/Produtos';
 import { useNavigation } from "@react-navigation/native";
 import Perfil from '../Pages/Home/perfil';
-import cursos from '../Pages/Home/Cursos';
+import Cursos from '../Pages/Home/Cursos';
+import Crescer from '../Pages/Home/Crescer';
 
 const Stacks = createStackNavigator();
 
@@ -70,7 +71,11 @@ export function NavigStacklog() {
       />
       <Stacks.Screen 
       name="Cursos" 
-      component={cursos} 
+      component={Cursos} 
+      />
+      <Stacks.Screen 
+      name="Crescer" 
+      component={Crescer} 
       />
     </Stacks.Navigator>
   );

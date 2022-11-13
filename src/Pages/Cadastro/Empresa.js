@@ -15,16 +15,17 @@ export default function CadEmpresa(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confpassword, setConfpassword] = useState('');
+    const [produto, setProduto] = useState('');
+    const [nomeEmpresa, setNomeEmpresa] = useState('');
     const [nome, setNome] = useState('');
-    const [cnpj, setCnpj] = useState('');
+    const [cpf, setCpf] = useState('');
     const [phone, setPhone] = useState('');
     const [uf, setUf] = useState('');
     const [cidade, setCidade] = useState('');
     const [cep, setCep] = useState('');
+    const [complemento, setComplemento] = useState('');
     const [rua, setRua] = useState('');
     const [numero, setNumero] = useState('');
-    const [funci, setFunci] = useState('');
-    const [Fatu, setFatu] = useState('');
     const [check, setCheck] = useState([]);
 
     const options = ['Desejo receber novidades e atualizações.', 'Concordo com                              e condições.']
@@ -43,7 +44,7 @@ export default function CadEmpresa(){
     }
 
     function termos(){
-        Alert.alert('Termos de uso', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.')
+        Alert.alert('Termos de uso', '1. DA FUNÇÃO DO SITE Este site foi criado e desenvolvido com a função de trazer conteúdo informativo de alta qualidade, a venda de produtos físicos, digitais e a divulgação de prestação de serviço. A EMPRESA busca através da criação de conteúdo de alta qualidade, desenvolvido por profissionais da área, trazer o conhecimento ao alcance de todos, assim como a divulgação dos próprios serviços. Nesta plataforma, poderá ser realizado tanto a divulgação de material original de alta qualidade, assim como a divulgação de produtos de e-commerce. Todo o conteúdo presente neste site foi desenvolvido buscando fontes e materiais de confiabilidade, assim como são baseados em estudos sérios e respeitados, através de pesquisa de alta nível. Todo o conteúdo é atualizado periodicamente, porém, pode conter em algum artigo, vídeo ou imagem, alguma informação que não reflita a verdade atual, não podendo a EMPRESA ser responsabilizada de nenhuma forma ou meio por qualquer conteúdo que não esteja devidamente atualizado. É de responsabilidade do usuário de usar todas as informações presentes no site com senso crítico, utilizando apenas como fonte de informação, e sempre buscando especialistas da área para a solução concreta do seu conflito.     2. DO ACEITE DOS TERMOS Este documento, chamado “Termos de Uso”, aplicáveis a todos os visitantes do site, foi desenvolvido por Diego Castro Advogado – OAB/PI 15.613, modificado com permissão para este site. Este termo especifica e exige que todo usuário ao acessar o site da EMPRESA, leia e compreenda todas as cláusulas do mesmo, visto que ele estabelece entre a EMPRESA e o VISITANTE direitos e obrigações entre ambas as partes, aceitos expressamente pelo VISITANTE a permanecer navegando no site da EMPRESA...')
     }
 
     async function cadastrarEmp(){
@@ -52,10 +53,10 @@ export default function CadEmpresa(){
 
         const enviP ={
             Nome: nome,
-            CPF: cnpj,
-            Telefone: phone,
-            Numero_de_funcionários: funci,
-            Faturamento_médio: Fatu
+            NomeEmpresa: nomeEmpresa,
+            Cpf: cpf,
+            Celular: phone,
+            Produto: produto
         };
 
         const enviEn ={
@@ -63,6 +64,7 @@ export default function CadEmpresa(){
             Cidade: cidade,
             Cep: cep,
             Rua: rua,
+            Complemento: complemento,
             Numero: numero
         };
   
@@ -94,7 +96,7 @@ export default function CadEmpresa(){
     }
 
     function logon(){
-        if( email === '' || password === '' || nome === '' || cnpj === '' || phone === '' || uf === '' || cidade === '' || cep === '' || rua === '' || numero === '' || funci === '' || Fatu === ''){
+        if( email === '' || password === '' || nomeEmpresa === '' || nome === '' || cpf === '' || phone === '' || complemento === '' || uf === '' || cidade === '' || cep === '' || rua === '' || numero === '' || produto === ''){
             Alert.alert('Algo deu errado', 'Preencha todos os campos')
             return;
         };
@@ -114,53 +116,56 @@ export default function CadEmpresa(){
         <ScrollView style={{flex:1, backgroundColor:'#F7FCFB'}}>
             <View style={{width:'100%', paddingLeft:30, marginTop:20, justifyContent:'center', paddingBottom:20}}>
             <Text style={{fontSize:20, fontWeight:'bold'}}>INFORMAÇÕES DA EMPRESA</Text>
-            <Text style={{fontSize:16, marginTop:20}}>NOME FANTASIA</Text>
+            <Text style={{fontSize:16, marginTop:20}}>NOME DA SUA EMPRESA</Text>
+                <TextInput 
+                    value={nomeEmpresa}
+                    onChangeText={value => setNomeEmpresa(value)}
+                    style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
+                    placeholder='(EX: LU DOCES)'
+                    placeholderTextColor={'grey'}
+                />
+                <Text style={{fontSize:16, marginTop:20}}>NOME COMPLETO</Text>
                 <TextInput 
                     value={nome}
                     onChangeText={value => setNome(value)}
                     style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
-                    placeholder='Nome da Empresa'
+                    placeholder='Nome Completo'
                     placeholderTextColor={'grey'}
                 />
-                <Text style={{marginTop:15, fontSize:16}}>CNPJ23.345.766</Text>
+                <Text style={{marginTop:15, fontSize:16}}>CPF ou MEI</Text>
                 <TextInput 
-                    value={cnpj}
-                    onChangeText={value => setCnpj(value)}
+                    value={cpf}
+                    onChangeText={value => setCpf(value)}
                     style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
-                    placeholder='00.000.000.0000-00'
+                    placeholder='000.000.000-00'
+                    keyboardType="numeric"
                     placeholderTextColor={'grey'}
                 />
-                <Text style={{marginTop:15, fontSize:16}}>TELEFONE</Text>
+                <Text style={{marginTop:15, fontSize:16}}>CELULAR</Text>
                 <TextInput 
                     value={phone}
                     onChangeText={value => setPhone(value)}
                     style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
-                    placeholder='(00) 0 0000-0000'
+                    placeholder='(00) 00000-0000'
+                    keyboardType="numeric"
                     placeholderTextColor={'grey'}
                 />
-                <Text style={{marginTop:15, fontSize:16}}>NÚMERO DE FUNCIONÁRIOS</Text>
+                 <Text style={{marginTop:15, fontSize:16}}>PRODUTO OFERECIDO</Text>
                 <TextInput 
-                    value={funci}
-                    onChangeText={value => setFunci(value)}
+                    value={produto}
+                    onChangeText={value => setProduto(value)}
                     style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
-                    placeholder='3 a 5 fucionários'
+                    placeholder='(EX: Salgados e doces)'
                     placeholderTextColor={'grey'}
                 />
-                <Text style={{marginTop:15, fontSize:16}}>FATURAMENTO MÉDIO</Text>
-                <TextInput 
-                    value={Fatu}
-                    onChangeText={value => setFatu(value)}
-                    style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
-                    placeholder='2 a 5 mil'
-                    placeholderTextColor={'grey'}
-                />
-                <Text style={{fontSize:20, fontWeight:'bold', marginTop:40}}>ENDEREÇO COMERCIAL</Text>
+                <Text style={{fontSize:20, fontWeight:'bold', marginTop:40}}>ENDEREÇO</Text>
                 <Text style={{marginTop:15, fontSize:16}}>CEP</Text>
                 <TextInput 
                     value={cep}
                     onChangeText={value => setCep(value)}
                     style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
                     placeholder='00000-000'
+                    keyboardType="numeric"
                     placeholderTextColor={'grey'}
                 />
                 <View style={{flexDirection:'row', width:'100%'}}>
@@ -206,12 +211,22 @@ export default function CadEmpresa(){
                             placeholderTextColor={'grey'}
                         />
                     </View>
+                    <View style={{ width:'30%'}}>
+                        <Text style={{marginTop:15, fontSize:16}}>COMPLEMENTO</Text>
+                        <TextInput 
+                            value={complemento}
+                            onChangeText={value => setComplemento(value)}
+                            style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
+                            placeholder='(EX: CASA 01)'
+                            placeholderTextColor={'grey'}
+                        />
+                    </View>
                 </View>
                 <Text style={{fontSize:20, marginTop:40, fontWeight:'bold'}}>CRIAR CONTA</Text>
-                <Image 
+                {/* <Image 
                 source={require('../../Assets/Conta.png')}
                 style={{marginTop:10}}
-                />
+                /> */}
                 <Text style={{fontSize:16}}>EMAIL</Text>
                 <TextInput 
                     value={email}

@@ -4,6 +4,7 @@ import Acessos from '../Pages/Cadastro/Acessos';
 import CadEmpresa from '../Pages/Cadastro/Empresa';
 import CadMotoboy from '../Pages/Cadastro/Motoboy';
 import CriarConta from '../Pages/Cadastro/CriarConta';
+import CadastroCliente from '../Pages/Cadastro/clietes';
 
 const Stack = createStackNavigator();
 
@@ -31,12 +32,17 @@ export function NavigStack() {
       <Stack.Screen 
       name="Empresa" 
       component={CadEmpresa} 
-      options={{title:'Cadastro de Empresa '}}
+      options={{title:'Cadastro da Empresa '}}
       />
       <Stack.Screen 
       name="Motoboy" 
       component={CadMotoboy} 
-      options={{title:'Cadastro de Motoboy '}}
+      options={{title:'Cadastro do Motoboy '}}
+      />
+        <Stack.Screen 
+      name="Cliente" 
+      component={CadastroCliente} 
+      options={{title:'Cadastro do Cliente '}}
       />
 
     </Stack.Navigator>

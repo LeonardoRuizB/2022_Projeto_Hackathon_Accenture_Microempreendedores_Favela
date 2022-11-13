@@ -23,6 +23,7 @@ export default function CadMotoboy(){
     const [cidade, setCidade] = useState('');
     const [cep, setCep] = useState('');
     const [rua, setRua] = useState('');
+    const [complemento, setComplemento] = useState('');
     const [numero, setNumero] = useState('');
     const [veiculo, setVeiculo] = useState('');
     const [placa, setPlaca] = useState('');
@@ -63,6 +64,7 @@ export default function CadMotoboy(){
             Cidade: cidade,
             Cep: cep,
             Rua: rua,
+            Complemento: complemento,
             Numero: numero
         };
 
@@ -108,7 +110,7 @@ export default function CadMotoboy(){
     } 
 
     async function logon(){
-        if( email === '' || password === '' || nome === '' || cpf === '' || phone === '' || uf === '' || cidade === '' || cep === '' || rua === '' || numero === ''|| veiculo === '' || placa === '' || renav === ''){
+        if( email === '' || password === '' || nome === '' || cpf === '' || complemento === '' || phone === '' || uf === '' || cidade === '' || cep === '' || rua === '' || numero === ''|| veiculo === '' || placa === '' || renav === ''){
             Alert.alert('Algo deu errado', 'Preencha todos os campos')
             return;
         };
@@ -142,6 +144,7 @@ export default function CadMotoboy(){
                     onChangeText={value => setCpf(value)}
                     style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
                     placeholder='000.000.000-00'
+                    keyboardType="numeric"
                     placeholderTextColor={'grey'}
                 />
                  <Text style={{marginTop:15, fontSize:16}}>CELULAR</Text>
@@ -150,6 +153,7 @@ export default function CadMotoboy(){
                     onChangeText={value => setPhone(value)}
                     style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
                     placeholder='(00) 00000-0000'
+                    keyboardType="numeric"
                     placeholderTextColor={'grey'}
                 />
               
@@ -161,6 +165,7 @@ export default function CadMotoboy(){
                     onChangeText={value => setCep(value)}
                     style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
                     placeholder='00000-000'
+                    keyboardType="numeric"
                     placeholderTextColor={'grey'}
                 />
                 <View style={{flexDirection:'row', width:'100%'}}>
@@ -206,6 +211,16 @@ export default function CadMotoboy(){
                             placeholderTextColor={'grey'}
                         />
                     </View>
+                    <View style={{ width:'30%'}}>
+                        <Text style={{marginTop:15, fontSize:16}}>COMPLEMENTO</Text>
+                        <TextInput 
+                            value={complemento}
+                            onChangeText={value => setComplemento(value)}
+                            style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
+                            placeholder='(EX: CASA 05)'
+                            placeholderTextColor={'grey'}
+                        />
+                    </View>
                 </View>
 
 
@@ -235,7 +250,9 @@ export default function CadMotoboy(){
                             onChangeText={value => setRenavam(value)}
                             style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
                             placeholder='00000000000'
-                            placeholderTextColor={'grey'}/>                    
+                            keyboardType="numeric"
+                            placeholderTextColor={'grey'}/>   
+                                             
                 </View>
 
                 <Text style={{fontSize:20, marginTop:40, fontWeight:'bold'}}>CRIAR CONTA</Text>
