@@ -1,5 +1,11 @@
 import React, {useState} from 'react';
-import { View,Text } from 'react-native';
+import {  View,
+    Text,
+    TouchableOpacity, 
+    TextInput, 
+    ScrollView,
+    Alert,
+    Image } from 'react-native';
 
 export default function Cliente(){
     const [email, setEmail] = useState('');

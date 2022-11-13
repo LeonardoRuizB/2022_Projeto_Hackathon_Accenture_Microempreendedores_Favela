@@ -48,6 +48,7 @@ export default function Login(){
                     style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
                     placeholder='*******'
                     placeholderTextColor={'grey'}
+                    secureTextEntry={true}
                 />
                 <TouchableOpacity style={{ height:50, width:'90%', backgroundColor:'#2460DA', marginTop:10, justifyContent:'center', alignItems:'center', borderRadius:5}} onPress={login}>
                     <View style={{flexDirection:'row'}}>                                

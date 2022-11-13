@@ -26,7 +26,7 @@ export default function Acessos(){
             <TouchableOpacity style={{backgroundColor:'#2460DA', width:'45%', marginTop:50, borderTopRightRadius:10, borderBottomRightRadius:10,height:61, justifyContent:'center'}} onPress={() => navigation.navigate('Login')}>
                 <Text style={{color:'white', fontWeight:'300', fontSize:16, paddingLeft:35}}>ENTRAR</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={{backgroundColor:'#2460DA', width:'55%', marginTop:10, borderTopRightRadius:10, borderBottomRightRadius:10,height:61, justifyContent:'center'}} onPress={() => navigation.navigate('Acordeao')}>
+            <TouchableOpacity style={{backgroundColor:'#2460DA', width:'55%', marginTop:10, borderTopRightRadius:10, borderBottomRightRadius:10,height:61, justifyContent:'center'}} onPress={() => navigation.navigate('CriarConta')}>
                 <Text style={{color:'white', fontWeight:'300', fontSize:16, paddingLeft:35}}>CRIAR CONTA</Text>
             </TouchableOpacity>
             <TouchableOpacity style={{alignItems:'center', marginTop:10}} onPress={saiba}>

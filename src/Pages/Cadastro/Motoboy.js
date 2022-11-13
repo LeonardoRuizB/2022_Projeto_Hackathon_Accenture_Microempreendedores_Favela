@@ -29,7 +29,7 @@ export default function CadMotoboy(){
     const [renavam, setRenavam] = useState('');
     const [check, setCheck] = useState([]);
 
-    const options = ['Desejo receber novidades e atualizações.', 'Concordo com os termos e condições.']
+    const options = ['Desejo receber novidades e atualizações.', 'Concordo com                              e condições.']
 
     function pickCheck(selectedchecks){
     
@@ -45,7 +45,7 @@ export default function CadMotoboy(){
     }
 
     function termos(){
-        Alert.alert('Termos de uso', '')
+        Alert.alert('Termos de uso', '– OBJETO – O presente instrumento particular de contrato, senão um termo de parceria comercial, para fins de regulamentar as condições de uso, cadastro e validação do COLABORADOR – MOTOBOY na PLATAFORMA ONLINE mantida pelo PAPALEGUA, para que esse possam oferecer os seus serviços de MOTOENTREGA aos Usuários consumidores vinculados ao aplicativo. - PRÉ-REQUISITOS / DOCUMENTOS - O COLABORADOR MOTOBOY deverá realizar o download, sem quaisquer ônus, do aplicativo PAPALEGUA fornecido em plataformas IOS e ANDROID, junto a GOOGLE PLAY e APPLE STORE, respectivamente, vinculada ao COLABORADOR MOTOBOY, realizar o pré-cadastro, informando todos os dados necessários e requeridos, para a perfeita conclusão do cadastro e posterior validação. No ato do pré-cadastro, será necessária a apresentação dos seguintes...')
     }
 
     async function cadastrarMotoboy(){
@@ -144,7 +144,7 @@ export default function CadMotoboy(){
                     placeholder='000.000.000-00'
                     placeholderTextColor={'grey'}
                 />
-                 <Text style={{marginTop:15, fontSize:16}}>TELEFONE</Text>
+                 <Text style={{marginTop:15, fontSize:16}}>CELULAR</Text>
                 <TextInput 
                     value={phone}
                     onChangeText={value => setPhone(value)}
@@ -152,7 +152,9 @@ export default function CadMotoboy(){
                     placeholder='(00) 0 0000-0000'
                     placeholderTextColor={'grey'}
                 />
-                <Text style={{fontSize:20, fontWeight:'bold', marginTop:40}}>ENDEREÇO RESIDENCIAL</Text>
+              
+
+                <Text style={{fontSize:20, fontWeight:'bold', marginTop:40}}>ENDEREÇO</Text>
                 <Text style={{marginTop:15, fontSize:16}}>CEP</Text>
                 <TextInput 
                     value={cep}
@@ -205,11 +207,41 @@ export default function CadMotoboy(){
                         />
                     </View>
                 </View>
+
+                <View>
+                    <Text style={{fontSize:20, fontWeight:'bold', marginTop:40}}>VEÍCULO</Text>
+                        <Text style={{marginTop:15, fontSize:16}}>VEÍCULO</Text>
+                            <TextInput 
+                            value={veiculo}
+                            onChangeText={value => setVeiculo(value)}
+                            style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
+                            placeholder='Moto honda CG 160 Fan'
+                            placeholderTextColor={'grey'}/>                    
+                </View>
+                <View>
+                        <Text style={{marginTop:15, fontSize:16}}>PLACA</Text>
+                            <TextInput 
+                            value={placa}
+                            onChangeText={value => setPlaca(value)}
+                            style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
+                            placeholder='ABC-0000'
+                            placeholderTextColor={'grey'}/>                    
+                </View>
+                <View>
+                        <Text style={{marginTop:15, fontSize:16}}>RENAVAM</Text>
+                            <TextInput 
+                            value={renavam}
+                            onChangeText={value => setRenavam(value)}
+                            style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
+                            placeholder='00000000000'
+                            placeholderTextColor={'grey'}/>                    
+                </View>
+
                 <Text style={{fontSize:20, marginTop:40, fontWeight:'bold'}}>CRIAR CONTA</Text>
-                <Image 
+                {/* <Image 
                 source={require('../../Assets/Conta.png')}
                 style={{marginTop:10}}
-                />
+                /> */}
                 <Text style={{fontSize:16, marginTop:10}}>EMAIL</Text>
                 <TextInput 
                     value={email}

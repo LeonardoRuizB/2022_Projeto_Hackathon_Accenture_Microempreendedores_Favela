@@ -6,6 +6,7 @@ import { Pagamento } from '../Pages/Home/Pagamento';
 import { Produtos } from '../Pages/Home/Produtos';
 import { useNavigation } from "@react-navigation/native";
 import Perfil from '../Pages/Home/perfil';
+import cursos from '../Pages/Home/Cursos';
 
 const Stacks = createStackNavigator();
 
@@ -19,15 +20,27 @@ export function NavigStacklog() {
 
   return (
     <Stacks.Navigator 
-    screenOptions={{headerStyle:{backgroundColor:'#2460DA', borderBottomLeftRadius:15, borderBottomRightRadius:15, height:70}, 
+    screenOptions={{headerStyle:{backgroundColor:'#2460DA', borderBottomLeftRadius:15, borderBottomRightRadius:15, height:90}, 
     headerTintColor:'white',
-    headerRight: () => <View> 
-     <TouchableOpacity style={{width:40, height:40, backgroundColor:'white', marginRight:20, borderRadius:10, justifyContent:'center', alignItems:'center'}} onPress={perfil}>
-        <Image 
-          source={require('../Assets/person.png')}
-          style={{width:25, height:25}}
-        />
-     </TouchableOpacity>
+    headerRight: () => <View style={{flexDirection:'row'}}> 
+    <View style={{alignItems:'center', marginRight:10}}>
+      <TouchableOpacity style={{width:40, height:40, backgroundColor:'white', borderRadius:10, justifyContent:'center', alignItems:'center', marginTop:5}} onPress={perfil}>
+          <Image 
+            source={require('../Assets/person.png')}
+            style={{width:25, height:25}}
+          />
+      </TouchableOpacity>
+      <Text style={{color:'white', marginTop:5}}>Perfil</Text>
+     </View>
+     <View style={{alignItems:'center', marginRight:20}}>
+      <TouchableOpacity style={{width:40, height:40, backgroundColor:'white', borderRadius:10, justifyContent:'center', alignItems:'center', marginTop:5}} onPress={perfil}>
+          <Image 
+            source={require('../Assets/lap.png')}
+            style={{width:27, height:23, tintColor:'#2460DA', marginTop:3}}
+          />
+      </TouchableOpacity>
+      <Text style={{color:'white', marginTop:5}}>Cursos</Text>
+     </View>
     </View>
   }}
     >
@@ -50,6 +63,10 @@ export function NavigStacklog() {
       <Stacks.Screen 
       name="Perfil" 
       component={Perfil} 
+      />
+      <Stacks.Screen 
+      name="Cursos" 
+      component={cursos} 
       />
     </Stacks.Navigator>
   );

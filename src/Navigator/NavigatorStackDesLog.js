@@ -2,8 +2,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Login from '../Pages/Cadastro';
 import Acessos from '../Pages/Cadastro/Acessos';
 import CadEmpresa from '../Pages/Cadastro/Empresa';
-import Acordeao from '../Pages/Cadastro/Acordeo';
 import CadMotoboy from '../Pages/Cadastro/Motoboy';
+import CriarConta from '../Pages/Cadastro/CriarConta';
 
 const Stack = createStackNavigator();
 
@@ -20,8 +20,8 @@ export function NavigStack() {
       options={{headerShown: false}}
       />
       <Stack.Screen 
-      name="Acordeao" 
-      component={Acordeao} 
+      name="CriarConta" 
+      component={CriarConta} 
       />
       <Stack.Screen 
       name="Login" 
