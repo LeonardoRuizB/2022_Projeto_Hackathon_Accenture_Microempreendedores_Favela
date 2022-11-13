@@ -27,7 +27,7 @@ export default function Perfil() {
                 <View style={{flexDirection:'row', marginLeft:20}}>
                     <View style={{flexDirection:'row', height:120, backgroundColor:'#F0F0f0', marginTop:15, borderRadius: 10, width:120, zIndex:2}}>
                         <View style={{justifyContent:'space-around', padding:10}}>
-                            <Text style={{fontSize:17, fontWeight:'400', textAlign:'center'}}>Nome da empresa</Text>
+                            <Text style={{fontSize:17, fontWeight:'400', textAlign:'center'}}>Nome da pessoa</Text>
                             <Image
                             source={require('../../Assets/stars.png')}
                             style={{}}
@@ -35,15 +35,13 @@ export default function Perfil() {
                         </View>
                     </View>
                     <View style={{backgroundColor:'#2460DA', zIndex:1, width:170, height:120,marginTop:15, marginLeft:-25, alignItems:'center', borderBottomEndRadius:10, borderTopEndRadius:10, justifyContent:'space-around'}}>
-                        <ScrollView showsVerticalScrollIndicator={false}>
                             <Text style={{paddingLeft:30, fontSize:16, textAlign:'justify', color:'white'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate </Text>
-                        </ScrollView>
                     </View>
                 </View>
                 <View style={{flexDirection:'row', marginLeft:20}}>
                     <View style={{flexDirection:'row', height:120, backgroundColor:'#F0F0f0', marginTop:15, borderRadius: 10, width:120, zIndex:2}}>
                         <View style={{justifyContent:'space-around', padding:10}}>
-                            <Text style={{fontSize:17, fontWeight:'400', textAlign:'center'}}>Nome da empresa</Text>
+                            <Text style={{fontSize:17, fontWeight:'400', textAlign:'center'}}>Nome da pessoa</Text>
                             <Image
                             source={require('../../Assets/stars.png')}
                             style={{}}

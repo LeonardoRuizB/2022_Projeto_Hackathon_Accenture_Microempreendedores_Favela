@@ -133,7 +133,7 @@ export default function CadMotoboy(){
                     value={nome}
                     onChangeText={value => setNome(value)}
                     style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
-                    placeholder='Nome e Sobrenome'
+                    placeholder='Nome Completo'
                     placeholderTextColor={'grey'}
                 />
                  <Text style={{marginTop:15, fontSize:16}}>CPF</Text>
@@ -149,7 +149,7 @@ export default function CadMotoboy(){
                     value={phone}
                     onChangeText={value => setPhone(value)}
                     style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
-                    placeholder='(00) 0 0000-0000'
+                    placeholder='(00) 00000-0000'
                     placeholderTextColor={'grey'}
                 />
               
@@ -160,7 +160,7 @@ export default function CadMotoboy(){
                     value={cep}
                     onChangeText={value => setCep(value)}
                     style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
-                    placeholder='00000-00'
+                    placeholder='00000-000'
                     placeholderTextColor={'grey'}
                 />
                 <View style={{flexDirection:'row', width:'100%'}}>
@@ -207,6 +207,7 @@ export default function CadMotoboy(){
                         />
                     </View>
                 </View>
+
 
                 <View>
                     <Text style={{fontSize:20, fontWeight:'bold', marginTop:40}}>VEÍCULO</Text>
