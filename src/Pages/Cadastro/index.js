@@ -58,7 +58,7 @@ export default function Login(){
                 </TouchableOpacity>
 
                 <TouchableOpacity>
-                    <Text style={{textAlign:'center', marginTop:5}}>esqueci minha senha</Text>
+                    <Text style={{textAlign:'center', marginTop:5}}>Esqueci minha senha</Text>
                 </TouchableOpacity>
         </View>
         </View>

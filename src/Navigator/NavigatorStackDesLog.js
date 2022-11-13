@@ -23,26 +23,27 @@ export function NavigStack() {
       <Stack.Screen 
       name="CriarConta" 
       component={CriarConta} 
+      options={{title:'CRIAR CONTA'}}
       />
       <Stack.Screen 
       name="Login" 
       component={Login}
-      options={{title:'Tela de Login '}}
+      options={{title:'TELA DE LOGIN'}}
       />
       <Stack.Screen 
       name="Empresa" 
       component={CadEmpresa} 
-      options={{title:'Cadastro da Empresa '}}
+      options={{title:'CADASTRO DA EMPRESA'}}
       />
       <Stack.Screen 
       name="Motoboy" 
       component={CadMotoboy} 
-      options={{title:'Cadastro do Motoboy '}}
+      options={{title:'CADASTRO DO MOTOBOY '}}
       />
         <Stack.Screen 
       name="Cliente" 
       component={CadastroCliente} 
-      options={{title:'Cadastro do Cliente '}}
+      options={{title:'CADASTRO DO CLIENTE'}}
       />
 
     </Stack.Navigator>

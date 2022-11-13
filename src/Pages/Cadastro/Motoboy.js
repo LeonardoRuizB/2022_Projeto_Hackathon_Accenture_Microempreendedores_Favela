@@ -211,7 +211,8 @@ export default function CadMotoboy(){
                             placeholderTextColor={'grey'}
                         />
                     </View>
-                    <View style={{ width:'30%'}}>
+                </View>
+                <View style={{ width:'100%'}}>
                         <Text style={{marginTop:15, fontSize:16}}>COMPLEMENTO</Text>
                         <TextInput 
                             value={complemento}
@@ -220,9 +221,7 @@ export default function CadMotoboy(){
                             placeholder='(EX: CASA 05)'
                             placeholderTextColor={'grey'}
                         />
-                    </View>
                 </View>
-
 
                 <View>
                     <Text style={{fontSize:20, fontWeight:'bold', marginTop:40}}>VEÍCULO</Text>

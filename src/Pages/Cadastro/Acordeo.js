@@ -11,7 +11,7 @@ export default function CriarConta() {
     const [moto, setMoto] = useState(null)
 
     function selCliente(){
-        setCliente('cleinte')
+        setCliente('cliente')
         setEmpresa(null)
         setMoto(null)
     }
@@ -30,16 +30,16 @@ export default function CriarConta() {
 
  return (
     <ScrollView style={{backgroundColor:'#F7FCFB'}}>
-        <Text style={{paddingHorizontal:30,fontSize:20, fontWeight:'bold', marginTop:10}}>Criar conta como:</Text>
+        <Text style={{paddingHorizontal:30,fontSize:20, fontWeight:'bold', marginTop:10}}>CRIAR CONTA COMO:</Text>
         <View style={{paddingHorizontal:30, flexDirection:'row', justifyContent:'center'}}>
             <TouchableOpacity style={{backgroundColor: cliente ? '#2460DA' : '#D9D9D9' , height:40, width:90, marginTop:10,borderRadius:10, justifyContent:'center', alignItems:'center', marginRight:10}} onPress={selCliente}>
-                <Text style={{color:cliente ? 'white' : 'black'}}>Cliente</Text>
+                <Text style={{color:cliente ? 'white' : 'black'}}>CLIENTE</Text>
             </TouchableOpacity>
             <TouchableOpacity style={{backgroundColor:empresa ? '#2460DA' : '#D9D9D9', height:40, width:90, marginTop:10,borderRadius:10, justifyContent:'center', alignItems:'center', marginRight:10}} onPress={selEmpresa}>
-                <Text style={{color:empresa ? 'white' : 'black'}}>Empresa</Text>
+                <Text style={{color:empresa ? 'white' : 'black'}}>EMPRESA</Text>
             </TouchableOpacity>
             <TouchableOpacity style={{backgroundColor:moto ? '#2460DA' : '#D9D9D9', height:40, width:90, marginTop:10,borderRadius:10, justifyContent:'center', alignItems:'center'}} onPress={selMotoboy}>
-                <Text style={{color:moto ? 'white' : 'black'}}>Motoboy</Text>
+                <Text style={{color:moto ? 'white' : 'black'}}>MOTOBOY</Text>
             </TouchableOpacity>
         </View>
         { cliente && 

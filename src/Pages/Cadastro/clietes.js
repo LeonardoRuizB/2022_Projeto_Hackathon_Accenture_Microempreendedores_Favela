@@ -187,7 +187,8 @@ export default function CadastroCliente(){
                             placeholderTextColor={'grey'}
                         />
                     </View>
-                    <View style={{ width:'30%'}}>
+                </View>
+                <View style={{ width:'100%'}}>
                         <Text style={{marginTop:15, fontSize:16}}>COMPLEMENTO</Text>
                         <TextInput 
                             value={complemento}
@@ -196,13 +197,12 @@ export default function CadastroCliente(){
                             placeholder='(EX: CASA 05)'
                             placeholderTextColor={'grey'}
                         />
-                    </View>
                 </View>
                 <Text style={{fontSize:20, marginTop:40, fontWeight:'bold'}}>CRIAR CONTA</Text>
-                <Image 
+                {/* <Image 
                 source={require('../../Assets/Conta.png')}
                 style={{marginTop:10}}
-                />
+                /> */}
                 <Text style={{fontSize:16}}>EMAIL</Text>
                 <TextInput 
                     value={email}

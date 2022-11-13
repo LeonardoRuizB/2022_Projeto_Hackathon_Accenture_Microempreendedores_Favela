@@ -211,16 +211,16 @@ export default function CadEmpresa(){
                             placeholderTextColor={'grey'}
                         />
                     </View>
-                    <View style={{ width:'30%'}}>
+                </View>
+                <View style={{ width:'100%'}}>
                         <Text style={{marginTop:15, fontSize:16}}>COMPLEMENTO</Text>
                         <TextInput 
                             value={complemento}
                             onChangeText={value => setComplemento(value)}
                             style={{ borderBottomWidth:0.5, height:40, width:'90%', paddingLeft:10, borderRadius:5}}
-                            placeholder='(EX: CASA 01)'
+                            placeholder='(EX: CASA 05)'
                             placeholderTextColor={'grey'}
                         />
-                    </View>
                 </View>
                 <Text style={{fontSize:20, marginTop:40, fontWeight:'bold'}}>CRIAR CONTA</Text>
                 {/* <Image 

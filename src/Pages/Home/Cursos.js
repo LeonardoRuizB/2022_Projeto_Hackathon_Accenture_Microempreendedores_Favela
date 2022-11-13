@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 
-export default function Cursos() {
+export default function Curso() {
  return (
    <View/>
   );

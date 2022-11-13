@@ -72,8 +72,8 @@ export default function Perfil() {
                     <Text>24</Text>
                 </View>
             </View>
-            <TouchableOpacity style={{backgroundColor:'#2460DA', height:70, marginTop:20, borderRadius:10, marginBottom:30, justifyContent:'center', alignItems:'center'}} onPress={() => navigation.navigate('Crescer')}>
-                <Text style={{color:'white', fontSize:25}}>ME AJUDA A CRESCER</Text>
+            <TouchableOpacity style={{backgroundColor:'#2460DA', height:55, marginTop:20, borderRadius:10, marginBottom:30, justifyContent:'center', alignItems:'center'}} onPress={() => navigation.navigate('Crescer')}>
+                <Text style={{color:'white', fontSize:20}}>AJUDA A CRESCER</Text>
             </TouchableOpacity>
         </View>
    </ScrollView>
