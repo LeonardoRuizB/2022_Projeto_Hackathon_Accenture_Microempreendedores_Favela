@@ -18,6 +18,10 @@ export function NavigStacklog() {
     navigation.navigate('Perfil')
   }
 
+  function Cursos(){
+    navigation.navigate('Cursos')
+  }
+
   return (
     <Stacks.Navigator 
     screenOptions={{headerStyle:{backgroundColor:'#2460DA', borderBottomLeftRadius:15, borderBottomRightRadius:15, height:90}, 
@@ -33,7 +37,7 @@ export function NavigStacklog() {
       <Text style={{color:'white', marginTop:5}}>Perfil</Text>
      </View>
      <View style={{alignItems:'center', marginRight:20}}>
-      <TouchableOpacity style={{width:40, height:40, backgroundColor:'white', borderRadius:10, justifyContent:'center', alignItems:'center', marginTop:5}} onPress={perfil}>
+      <TouchableOpacity style={{width:40, height:40, backgroundColor:'white', borderRadius:10, justifyContent:'center', alignItems:'center', marginTop:5}} onPress={Cursos}>
           <Image 
             source={require('../Assets/lap.png')}
             style={{width:27, height:23, tintColor:'#2460DA', marginTop:3}}
