@@ -24,7 +24,7 @@
 
 # Passo a passo
 
-1° Passo - Você deve efetuar o ```git clone (url do git)```  em sua máquina.
+1° Passo - Você deve executar o ```git clone (url do git)```  em sua máquina.
 
 2° Passo - Abrir a pasta clonada dentro do Prompt de comando ou pelo seu aplicativo de sua preferência.
 
