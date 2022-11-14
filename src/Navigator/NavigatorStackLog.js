@@ -1,13 +1,13 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { View,Text, TouchableOpacity, Image } from 'react-native';
-import Home from '../Pages/Home'
-import { Carrinho } from '../Pages/Home/Carrinho';
-import { Pagamento } from '../Pages/Home/Pagamento';
-import { Produtos } from '../Pages/Home/Produtos';
+import Home from '../Pages/Home' 
 import { useNavigation } from "@react-navigation/native";
 import Perfil from '../Pages/Home/perfil';
 import Crescer from '../Pages/Home/Crescer';
 import Curso from '../Pages/Home/Cursos';
+import PagCurso from '../Pages/Home/PagCurso';
+import Trilha from '../Pages/Home/trilha';
+import auth from '@react-native-firebase/auth';  
 
 const Stacks = createStackNavigator();
 
@@ -21,6 +21,10 @@ export function NavigStacklog() {
 
   function Cursos(){
     navigation.navigate('Cursos')
+  }
+
+  function Sair(){
+    auth().signOut()
   }
 
   return (
@@ -37,7 +41,7 @@ export function NavigStacklog() {
       </TouchableOpacity>
       <Text style={{color:'white', marginTop:5}}>Perfil</Text>
      </View>
-     <View style={{alignItems:'center', marginRight:20}}>
+     <View style={{alignItems:'center', marginRight:10}}>
       <TouchableOpacity style={{width:40, height:40, backgroundColor:'white', borderRadius:10, justifyContent:'center', alignItems:'center', marginTop:5}} onPress={Cursos}>
           <Image 
             source={require('../Assets/lap.png')}
@@ -46,24 +50,21 @@ export function NavigStacklog() {
       </TouchableOpacity>
       <Text style={{color:'white', marginTop:5}}>Cursos</Text>
      </View>
+     <View style={{alignItems:'center', marginRight:20}}>
+      <TouchableOpacity style={{width:40, height:40, backgroundColor:'white', borderRadius:10, justifyContent:'center', alignItems:'center', marginTop:5}} onPress={Sair}>
+          <Image 
+            source={require('../Assets/sair.png')}
+            style={{width:23, height:22, tintColor:'#2460DA', marginTop:3}}
+          />
+      </TouchableOpacity>
+      <Text style={{color:'white', marginTop:5}}>Sair</Text>
+     </View>
     </View>
   }}
     >
       <Stacks.Screen 
       name="Home" 
       component={Home} 
-      />
-      <Stacks.Screen 
-      name="Produtos" 
-      component={Produtos} 
-      />
-      <Stacks.Screen 
-      name="Carrinho" 
-      component={Carrinho} 
-      />
-      <Stacks.Screen 
-      name="Pagamento" 
-      component={Pagamento} 
       />
       <Stacks.Screen 
       name="Perfil" 
@@ -77,7 +78,17 @@ export function NavigStacklog() {
       <Stacks.Screen 
       name="Crescer" 
       component={Crescer} 
-      options={{title:'AJUDE A CRESCER'}}
+      options={{title:'CRESCER'}}
+      />
+      <Stacks.Screen 
+      name="PagCurso" 
+      component={PagCurso} 
+      options={{title:'Pagina do Curso'}}
+      />
+      <Stacks.Screen 
+      name="Trilha" 
+      component={Trilha} 
+      options={{title:'Pagina da Trilha'}}
       />
     </Stacks.Navigator>
   );

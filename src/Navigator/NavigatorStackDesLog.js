@@ -1,10 +1,9 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from '../Pages/Cadastro';
 import Acessos from '../Pages/Cadastro/Acessos';
-import CadEmpresa from '../Pages/Cadastro/Empresa';
-import CadMotoboy from '../Pages/Cadastro/Motoboy';
-import CriarConta from '../Pages/Cadastro/CriarConta';
-import CadastroCliente from '../Pages/Cadastro/clietes';
+import CadastroEmpreendedor from '../Pages/Cadastro/Empreendedor';
+import CadastroPadrinho from '../Pages/Cadastro/Padrinho';
+import CriarConta from '../Pages/Cadastro/Acordeo';
 
 const Stack = createStackNavigator();
 
@@ -31,19 +30,14 @@ export function NavigStack() {
       options={{title:'TELA DE LOGIN'}}
       />
       <Stack.Screen 
-      name="Empresa" 
-      component={CadEmpresa} 
-      options={{title:'CADASTRO DA EMPRESA'}}
+      name="Padrinho" 
+      component={CadastroPadrinho} 
+      options={{title:'CADASTRO DO PADRINHO'}}
       />
       <Stack.Screen 
-      name="Motoboy" 
-      component={CadMotoboy} 
-      options={{title:'CADASTRO DO MOTOBOY '}}
-      />
-        <Stack.Screen 
-      name="Cliente" 
-      component={CadastroCliente} 
-      options={{title:'CADASTRO DO CLIENTE'}}
+      name="Empreendedor" 
+      component={CadastroEmpreendedor} 
+      options={{title:'CADASTRO DO EMPREENDEDOR'}}
       />
 
     </Stack.Navigator>
