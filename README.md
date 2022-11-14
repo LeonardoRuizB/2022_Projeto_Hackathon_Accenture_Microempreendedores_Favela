@@ -1,3 +1,21 @@
 # Hackathon Accenture - Microempreendedores na Favela!!
 
-O foco do projeto é voltado para os responsáveis familiares que vivem na comunidade da favela, essas que possuem baixa renda, podendo estar em situação de vulnerabilidade social. Recebendo pouco ou nenhum auxilio governamental, pertencem a uma população de baixa renda e geralmente com pouca instrução acadêmica. O objetivo do projeto é levar a essa população a possibilidade de terem fácil acesso uma plataforma de e-commerce com aplicações 100% Mobile, sem custo de investimento, fácil de usar, com navegação orientada e intuitiva, e também, acesso a cursos rápidos e objetivos, com linguagem simplificada, para que possam ter as instruções básicas sobre vários temas do empreendedorismo. Assim possibilita a eles obterem um retorno financeiro rápido e motivação para manterem vividos o espirito empreendedor e melhorarem sua qualidade de vida, e também, diante da situação de pandemia, garante maior segurança e prevenção de doenças, já que pode trabalhar de casa, evitando riscos com a maior exposição. 
+# Idealização desse Aplicativo
+
+° Aumentar a visibilidade do empreendimento na favela.
+
+° Dar foco ao negócio na comunidade e poder apadrinha-lo.
+
+° A única plataforma Android de acesso simplificado e objetivo.
+
+° Benefícios educacionais associados a abertura de CNPJ MEI.
+
+# Passo a passo para a utilização do aplicativo
+
+1° Passo - Você deve efetuar o ```git clone (url do git)```  em sua máquina.
+2° Passo - Abrir a pasta clonada dentro do Prompt de comando ou pelo seu aplicativo de sua preferência.
+3° Passo - Executar o comando ```npm install``` (Você deve ter o Node.js instalado em sua máquina).
+4° Passo - Abrir emulador Android Studio.
+5° Passo - Executar o comando em seu Prompt de comando ```expo run:android```, aguarde o app buildar no emulador.
+6° Passo - Você pode se cadastrar, ou usar a conta cadastrada no banco de dados ```benta@ig.com```, com a senha ```123456```.
+7° Passo - Você já pode desfrutar do aplicativo.
