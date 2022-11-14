@@ -1,7 +1,6 @@
-# Hackathon Accenture - Microempreendedores na Favela!!
+# Hackathon Accenture - Como facilitar a transformação digital dos microempreendedores da favela?
 
 # Aplicativo COMUNIDADE+
-
 
 # Idealização desse Aplicativo
 
