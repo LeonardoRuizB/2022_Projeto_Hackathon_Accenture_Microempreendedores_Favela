@@ -22,7 +22,7 @@
 ° Parceria com uma instituição de ensino, como o SEBRAE, para produção de conteúdo simplificado e prático em posts e vídeos.
 
 
-# Passo a passo para a utilização do aplicativo
+# Passo a passo
 
 1° Passo - Você deve efetuar o ```git clone (url do git)```  em sua máquina.
 
