@@ -18,20 +18,26 @@ export default function Acessos(){
     }
 
     return(
-        <View style={{backgroundColor:'#F7FCFB', flex:1, justifyContent:'flex-end', paddingBottom:20}}>
+        <View style={{backgroundColor:'#F7FCFB', height:'100%', justifyContent:'flex-end', paddingBottom:20}}>
             <Image 
-            source={require('../../Assets/Acessos.png')}
-            style={{marginTop:120}}
+            source={require('../../Assets/favela.jpeg')}
+            style={{flex:1, opacity:0.5}}
             />
-            <TouchableOpacity style={{backgroundColor:'#2460DA', width:'45%', marginTop:50, borderTopRightRadius:10, borderBottomRightRadius:10,height:61, justifyContent:'center'}} onPress={() => navigation.navigate('Login')}>
-                <Text style={{color:'white', fontWeight:'300', fontSize:16, paddingLeft:35}}>ENTRAR</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={{backgroundColor:'#2460DA', width:'55%', marginTop:10, borderTopRightRadius:10, borderBottomRightRadius:10,height:61, justifyContent:'center'}} onPress={() => navigation.navigate('CriarConta')}>
-                <Text style={{color:'white', fontWeight:'300', fontSize:16, paddingLeft:35}}>CRIAR CONTA</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={{alignItems:'center', marginTop:10}} onPress={saiba}>
-                <Text>SAIBA MAIS!</Text>
-            </TouchableOpacity>
+            <View style={{marginTop:-330}}>
+                <View style={{flexDirection:'row', alignItems:'center'}}>
+                    <Text style={{fontSize:50, fontWeight:'bold', marginLeft: 30}}>Comunidade</Text> 
+                    <Text style={{fontSize:70, fontWeight:'bold', marginLeft:10 , color:'#2460DA'}}>+</Text> 
+                </View>
+                <TouchableOpacity style={{backgroundColor:'#2460DA', width:'45%', marginTop:50, borderTopRightRadius:10, borderBottomRightRadius:10,height:61, justifyContent:'center'}} onPress={() => navigation.navigate('Login')}>
+                    <Text style={{color:'white', fontWeight:'bold', fontSize:25, paddingLeft:35}}>ENTRAR</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={{backgroundColor:'#2460DA', width:'65%', marginTop:10, borderTopRightRadius:10, borderBottomRightRadius:10,height:61, justifyContent:'center'}} onPress={() => navigation.navigate('CriarConta')}>
+                    <Text style={{color:'white', fontWeight:'bold', fontSize:25, paddingLeft:35}}>CRIAR CONTA</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={{alignItems:'center', marginTop:10}} onPress={saiba}>
+                    <Text>SAIBA MAIS!</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     )
 }
